@@ -1,29 +1,7 @@
-// import { Link } from "react-router-dom";
-
-// const Navbar = () => {
-//   return (
-//     <div>
-//       <ul className="flex gap-6">
-//         <li>
-//           <Link to="/">Home</Link>
-//         </li>
-//         <li>
-//           <Link to="about">About</Link>
-//         </li>
-//         <li>
-//           <Link to="store">Store</Link>
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-// import CssBaseline from "@mui/material/CssBaseline";
+import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
@@ -109,10 +87,10 @@ export const Navbar = (props: Props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    // <Box sx={{ display: "flex" }}>
-    //   <CssBaseline />
-    <>
-      <AppBar component="nav">
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+
+      <AppBar component="nav" position="static">
         <Container maxWidth="xl">
           <Toolbar>
             <IconButton
@@ -163,7 +141,7 @@ export const Navbar = (props: Props) => {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -176,8 +154,7 @@ export const Navbar = (props: Props) => {
           {drawer}
         </Drawer>
       </Box>
-    </>
-    // </Box>
+    </Box>
   );
 };
 

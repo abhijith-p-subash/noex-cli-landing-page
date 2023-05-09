@@ -1,34 +1,23 @@
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
 const ImgMediaCard = () => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <Container maxWidth="sm">
+      <Typography variant="h3" align="center" color="textPrimary" gutterBottom>
+        Welcome to my app!
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        align="center"
+        color="textSecondary"
+        paragraph
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor
+        tristique libero ac imperdiet. Nam porta, tellus eget mattis congue,
+        velit mauris tempor arcu, nec vulputate massa enim nec nisl.
+      </Typography>
+    </Container>
   );
 };
 
